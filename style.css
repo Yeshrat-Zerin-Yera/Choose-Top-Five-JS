@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Header */
+header {
+    height: 70vh;
+    background-image: url("images/banner-left.png"), url("images/banner-right.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right bottom;
+    background-size: 30%, 15%;
+    background-color: #0c090a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header>section {
+    width: 60%;
+    margin: auto;
+}
+
+header>section h1,
+header>section h1 span {
+    font-family: 'Bungee Spice', cursive;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+header>section h1 span {
+    background-image: url("images/shape.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 5%;
+}
+
+header>section p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media(max-width:1200px) {
+    header {
+        background-size: 40%, 20%;
+    }
+
+    header>section h1,
+    header>section h1 span {
+        font-size: 4rem;
+    }
+
+    header>section p {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width:992px) {
+    header {
+        background-size: 50%, 25%;
+    }
+
+    header>section h1,
+    header>section h1 span {
+        font-size: 3rem;
+    }
+
+    header>section p {
+        font-size: 1.2rem;
+    }
+
+    header>section p span {
+        display: none;
+    }
+}
+
+@media(max-width:576px) {
+    header {
+        height: 50vh;
+        background-size: 80%, 40%;
+    }
+
+    header section {
+        width: 80%;
+    }
+
+    header>section h1,
+    header>section h1 span {
+        font-size: 2rem;
+    }
+
+    header>section p {
+        font-size: 1rem;
+    }
+}
