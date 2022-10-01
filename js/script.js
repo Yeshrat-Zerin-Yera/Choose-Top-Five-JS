@@ -40,7 +40,7 @@ document.getElementById('players').addEventListener('click', function (event) {
 document.getElementById('calculate').addEventListener('click', function () {
     const number = document.getElementById('player-list').childNodes.length;
     const PerPlayer = getInputValue('per-player');
-    const newPlayerFees = number * PerPlayer;
+    const newPlayerFees = parseFloat((number * PerPlayer).toFixed(2));
     if (PerPlayer < 0) {
         alert("Negetive number isn't allowed");
         return;
@@ -57,7 +57,7 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const managerFee = getInputValue('manager');
     const coachFee = getInputValue('coach');
     const playerFee = getElementValue('player-fees');
-    const total = managerFee + coachFee + playerFee;
+    const total = parseFloat((managerFee + coachFee + playerFee).toFixed(2));
     if (managerFee < 0 || coachFee < 0) {
         alert("Negetive number isn't allowed");
         return;
