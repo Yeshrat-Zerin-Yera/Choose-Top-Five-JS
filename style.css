@@ -99,7 +99,8 @@ main>section {
     margin: 3% 0;
 }
 
-#players button {
+#players button,
+#budget button {
     font-size: 1.3rem;
     font-weight: 500;
     background-color: #0151a6;
@@ -111,8 +112,9 @@ main>section {
     border: none;
 }
 
-#players button:hover {
-    background-color: #626262;
+#players button:hover,
+#budget button:hover {
+    background-color: #b25c00;
     transition: 500ms linear;
 }
 
@@ -175,20 +177,7 @@ main>section {
 }
 
 #budget button {
-    font-size: 1.3rem;
-    font-weight: 500;
-    background-color: #0151a6;
-    color: white;
-    display: block;
-    margin: 6% auto 8%;
-    padding: 3%;
     width: 100%;
-    border: none;
-}
-
-#budget button:hover {
-    background-color: #b25c00;
-    transition: 500ms linear;
 }
 
 #total-color {
