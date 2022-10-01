@@ -5,6 +5,10 @@
     font-family: 'Manrope', sans-serif;
 }
 
+body {
+    background-color: #242124;
+}
+
 /* Header */
 header {
     height: 70vh;
@@ -32,7 +36,7 @@ header>section h1 span {
 }
 
 header>section h1 span {
-    background-image: url("images/shape.png");
+    background-image: url("images/shape-1.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -44,6 +48,143 @@ header>section p {
     font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
+}
+
+/* Main */
+main {
+    margin-top: 5%;
+}
+
+main>section {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2%;
+}
+
+/* Players */
+#players {
+    grid-column: 1/10;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+
+#players div {
+    border: 1px solid #626262;
+    background-color: #0c090a;
+}
+
+#players div:hover {
+    box-shadow: 1px 1px 40px #626262;
+    transition: 500ms linear;
+}
+
+#players img {
+    width: 100%;
+    height: 60%;
+}
+
+#players h2 {
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+    margin: 3% 0;
+}
+
+#players h3 {
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    margin: 3% 0;
+}
+
+#players button {
+    font-size: 1.3rem;
+    font-weight: 500;
+    background-color: #0151a6;
+    color: white;
+    display: block;
+    margin: 6% auto 8%;
+    padding: 3%;
+    width: 90%;
+    border: none;
+}
+
+#players button:hover {
+    background-color: #626262;
+    transition: 500ms linear;
+}
+
+/* Sidebar */
+#sidebar {
+    grid-column: 10/13;
+    color: white;
+}
+
+#sidebar>div {
+    background-color: #0c090a;
+}
+
+#sidebar>div>h1 {
+    color: white;
+    text-align: center;
+    background-image: url("images/shape-2.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 10%;
+}
+
+#selected-v {
+    padding: 15% 5%;
+}
+
+#budget {
+    margin-top: 10%;
+    padding: 15% 5%;
+}
+
+#budget div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+    font-size: 1.3rem;
+}
+
+#budget label {
+    font-weight: 100;
+}
+
+#budget input {
+    width: 50%;
+    padding: 2%;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#budget button {
+    font-size: 1.3rem;
+    font-weight: 500;
+    background-color: #0151a6;
+    color: white;
+    display: block;
+    margin: 6% auto 8%;
+    padding: 3%;
+    width: 100%;
+    border: none;
+}
+
+#budget button:hover {
+    background-color: #b25c00;
+    transition: 500ms linear;
+}
+
+#total-color {
+    color: #b25c00;
+    font-weight: 800;
 }
 
 @media(max-width:1200px) {
@@ -58,6 +199,15 @@ header>section p {
 
     header>section p {
         font-size: 1.3rem;
+    }
+
+    #players {
+        grid-column: 1/9;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #sidebar {
+        grid-column: 9/13;
     }
 }
 
@@ -78,6 +228,30 @@ header>section p {
     header>section p span {
         display: none;
     }
+
+    main>section {
+        gap: 4%;
+    }
+
+    #players {
+        grid-column: 1/8;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .4%;
+    }
+
+    #sidebar {
+        grid-column: 8/13;
+    }
+}
+
+@media(max-width:778px) {
+    #players {
+        grid-column: 1/7;
+    }
+
+    #sidebar {
+        grid-column: 7/13;
+    }
 }
 
 @media(max-width:576px) {
@@ -97,5 +271,14 @@ header>section p {
 
     header>section p {
         font-size: 1rem;
+    }
+
+    #players {
+        grid-column: 1/13;
+        margin-bottom: 20%;
+    }
+
+    #sidebar {
+        grid-column: 1/13;
     }
 }
