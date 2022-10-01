@@ -140,6 +140,16 @@ main>section {
     padding: 15% 5%;
 }
 
+#player-list {
+    font-size: 1.3rem;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+#player-list li {
+    margin-bottom: 5%;
+}
+
 #budget {
     margin-top: 10%;
     padding: 15% 5%;

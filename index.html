@@ -113,33 +113,34 @@
             <div id="sidebar">
                 <div id="selected-v">
                     <h1>Selected V</h1>
+                    <ol id="player-list"></ol>
                 </div>
                 <div id="budget">
                     <h1>Budget</h1>
-                    <form action="">
-                        <div>
-                            <label for="per-player">Per Player</label>
-                            <input id="per-player" type="text" name="per-player">
-                        </div>
-                        <button id="calculate">Calculate</button>
-                        <div>
-                            <p>Player Fees</p>
-                            <p>$<span id="player-expenses">0000</span></p>
-                        </div>
-                        <div>
-                            <label for="manager">Manager</label>
-                            <input id="manager" type="text" name="manager">
-                        </div>
-                        <div>
-                            <label for="coach">Coach</label>
-                            <input id="coach" type="text" name="coach">
-                        </div>
-                        <button id="calculate-total">Calculate Total</button>
-                        <div>
-                            <p>Total</p>
-                            <p id="total-color">$<span id="total">0000</span></p>
-                        </div>
-                    </form>
+                    <!-- <form action=""> -->
+                    <div>
+                        <label for="per-player">Per Player</label>
+                        <input id="per-player" type="text" name="per-player">
+                    </div>
+                    <button id="calculate">Calculate</button>
+                    <div>
+                        <p>Player Fees</p>
+                        <p>$<span id="player-fees">0000</span></p>
+                    </div>
+                    <div>
+                        <label for="manager">Manager</label>
+                        <input id="manager" type="text" name="manager">
+                    </div>
+                    <div>
+                        <label for="coach">Coach</label>
+                        <input id="coach" type="text" name="coach">
+                    </div>
+                    <button id="calculate-total">Calculate Total</button>
+                    <div>
+                        <p>Total</p>
+                        <p id="total-color">$<span id="total">0000</span></p>
+                    </div>
+                    <!-- </form> -->
                 </div>
             </div>
         </section>
@@ -152,9 +153,7 @@
     </footer>
 
     <!-- Javascript -->
-    <script src="js/common.js"></script>
-    <script src="js/selected.js"></script>
-    <script src="js/budget.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
