@@ -15,8 +15,8 @@ function getElementValue(elementId) {
 };
 
 // Set Element Value
-function setElementValue(elementtId, newValue) {
-    document.getElementById(elementtId).innerText = newValue;
+function setElementValue(elementId, newValue) {
+    document.getElementById(elementId).innerText = newValue;
 };
 
 // Select Player
