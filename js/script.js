@@ -4,7 +4,7 @@ function getInputValue(inputId) {
     const inputString = inputField.value;
     const inputValue = parseFloat(inputString);
     return inputValue;
-}
+};
 
 // Get Element Value
 function getElementValue(elementId) {
@@ -12,19 +12,18 @@ function getElementValue(elementId) {
     const elementString = elementField.innerText;
     const elementValue = parseFloat(elementString);
     return elementValue;
-}
+};
 
 // Set Element Value
 function setElementValue(elementtId, newValue) {
     document.getElementById(elementtId).innerText = newValue;
-}
+};
 
 // Select Player
-document.getElementById('players').addEventListener('click', function (event) {
-    const nameElement = event.target;
-    const name = nameElement.previousSibling.previousSibling.previousSibling.previousSibling.innerText;
+function selectPlayer(event) {
+    const playerName = event.previousSibling.previousSibling.previousSibling.previousSibling.innerText;
     const li = document.createElement('li');
-    li.innerText = name;
+    li.innerText = playerName;
     const ul = document.getElementById('player-list');
     const lists = ul.childNodes.length;
     if (lists > 4) {
@@ -32,9 +31,9 @@ document.getElementById('players').addEventListener('click', function (event) {
         return;
     }
     ul.appendChild(li);
-    nameElement.style.background = '#626262';
-    nameElement.setAttribute('disabled', true);
-})
+    event.style.background = '#626262';
+    event.setAttribute('disabled', true);
+};
 
 // Calculate And Set Player Fees
 document.getElementById('calculate').addEventListener('click', function () {
@@ -50,7 +49,7 @@ document.getElementById('calculate').addEventListener('click', function () {
         return;
     }
     setElementValue('player-fees', newPlayerFees);
-})
+});
 
 // Calculate And Set Total Expenses
 document.getElementById('calculate-total').addEventListener('click', function () {
@@ -67,4 +66,4 @@ document.getElementById('calculate-total').addEventListener('click', function ()
         return;
     }
     setElementValue('total', total);
-})
+});
